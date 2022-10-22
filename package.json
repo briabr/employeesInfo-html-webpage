@@ -1,0 +1,22 @@
+{
+  "name": "obj.chllange-10",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/briabr/employeesInfo-html-webpage.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/briabr/employeesInfo-html-webpage/issues"
+  },
+  "homepage": "https://github.com/briabr/employeesInfo-html-webpage#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
