@@ -2,6 +2,8 @@ const inquirer = require ('inquirer')
 const Engineer = require ('./lib/engineer')
 const Manager = require ('./lib/manager')
 const Intern = require ('./lib/intern')
+const generateTeam = require("./src/template.html");
+
 
 let employeeArray = []
 
@@ -124,5 +126,3 @@ function engineerOperations(){
         let engineer_object = new Engineer(obj)
     })
 }
-//html in index.js
-// 
