@@ -2,11 +2,16 @@ const inquirer = require ('inquirer')
 const Engineer = require ('./lib/engineer')
 const Manager = require ('./lib/manager')
 const Intern = require ('./lib/intern')
-const generateTeam = require("./src/template.html");
+const path = require("path");
+const generateTeam = require("./src/template.js");
+const util = require("util");
+const writeToFile = util.promisify(fs.writeFile);
+
+
 
 
 let employeeArray = []
-
+function runApp () {
 let managerQuestions = [
     {
     type: 'input',
@@ -126,3 +131,5 @@ function engineerOperations(){
         let engineer_object = new Engineer(obj)
     })
 }
+
+function generateHtmlTeam (answer) {

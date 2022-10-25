@@ -2,7 +2,7 @@
     border-radius: 0;
 }
 
-.manager-employee-card,.engineer1-employee-card,.engineer2-employee-card,.engineer3-employee-card,.intern-employee-card {
+.manager-employee-card,.engineer-employee-card,.intern-employee-card {
     box-shadow: 5px 5px 5px gray;
     margin: 1rem;
     border: none;
