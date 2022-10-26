@@ -2,10 +2,10 @@ const inquirer = require ('inquirer')
 const Engineer = require ('./lib/engineer')
 const Manager = require ('./lib/manager')
 const Intern = require ('./lib/intern')
-const path = require("path");
-const generateTeam = require('./src/template')
-const OUTPUT_DIR = path.resolve(__dirname, "output");
-const outputPath = path.join(OUTPUT_DIR, "template.html");
+const fs = require('fs');
+const util = require("util");
+const writeToFile = util.promisify(fs.writeFile);
+
 
 
 let employeeArray = []
