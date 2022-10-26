@@ -2,16 +2,10 @@ const inquirer = require ('inquirer')
 const Engineer = require ('./lib/engineer')
 const Manager = require ('./lib/manager')
 const Intern = require ('./lib/intern')
-const path = require("path");
-const generateTeam = require("./src/template.js");
-const util = require("util");
-const writeToFile = util.promisify(fs.writeFile);
-
-
-
+const generateTeam = require('./src/template')
 
 let employeeArray = []
-function runApp () {
+
 let managerQuestions = [
     {
     type: 'input',
@@ -81,11 +75,12 @@ function startQuestions(){
     inquirer.prompt(managerQuestions).then(answers => {
         let obj= {
             name: answers.manager_name,
-            email: answer.manager_email,
-            id : answer.manager_id,
-            role: answer_role
+            email: answers.manager_email,
+            id : answers.manager_id,
         }
         let manager_object = new Manager(obj)
+        employeeArray.push(manager_object)
+        console.log(employeeArray[0].name.name)
         askChoices()
     })
 
@@ -103,7 +98,9 @@ function askChoices(){
         }else if (answer.choice === "intern") {
             internOperations()
         }else if (answer.choice === "stop"){
-            exit()
+
+            return
+
         }
     })
 
@@ -112,11 +109,14 @@ function internOperations(){
     inquirer.prompt(internQuestions).then(answers => {
         let obj= {
             name: answers.intern_name,
-            email: answer.intern_email,
-            id : answer.intern_id,
-            school: intern_school
+            email: answers.intern_email,
+            id : answers.intern_id,
+            school: answers.intern_school
         }
         let intern_object = new Intern(obj)
+        employeeArray.push(intern_object)
+        console.log(employeeArray)
+        askChoices()
     })
 
 }
@@ -124,12 +124,20 @@ function engineerOperations(){
     inquirer.prompt(engineerQuestions).then(answers => {
         let obj= {
             name: answers.engineer_name,
-            email: answer.engineer_email,
-            id : answer.engineer_id,
-            github: engineer_github
+            email: answers.engineer_email,
+            id : answers.engineer_id,
+            github: answers.engineer_github
         }
         let engineer_object = new Engineer(obj)
+        employeeArray.push(engineer_object)
+        console.log(employeeArray)
+        askChoices()
     })
 }
+startQuestions()
 
-function generateHtmlTeam (answer) {
+
+//get prompts for command lines
+
+//generate the team
+//generate html 
