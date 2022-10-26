@@ -1,0 +1,40 @@
+function generateIntern(interns){
+    //at each intern we will create a card
+    var returnVal =``;
+    for (loop){
+        //loop through each intern
+        returnVal +=`<div class="intern-employee-card">
+        <div class="card-header bg-primary text-white">
+            <h2 class="card-title">Masahiro kawamura</h2>
+            <h3 class="card-title"><i class="fas fa-user-graduate mr-2"></i>Intern</h3>
+        </div>
+        <div class="card-content">
+            <ul class="list-group">
+                <li class="list-group-item">ID: 0</li>
+                <li class="list-group-item">Email: <a href="mailto:masahirokawamura@git.com">masahirokawamura@git.com</a></li>
+                <li class="list-group-item">School: American University Beirut</li>
+            </ul>
+        </div>
+    </div>`
+    }
+    return returnVal;
+ }
+ function generateHtml(array){
+    //create subarrays of the given array seperated by the roles
+    var engineers = [];
+    var managers =[];
+    var intern =[];
+    for(var i=0; i<array.length;i++){
+        if(array[i])// if the role is manager push to manager
+        if(array[i])// if the role is engineer push to engineer
+        if(array[i])// if the role is intern push to intern
+    }
+
+var htmlIntern = generateIntern(intrens);
+    var htmlManager = generatemanager(manager);
+    var htmlEngineer = generateEngineer(manager);
+    var output = temp + htmlEngineer + htmlIntern + htmlManager + bottom;
+
+    // writetofile using output 
+    writeToFile("./assets/html.index", html);
+ }
