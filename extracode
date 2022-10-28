@@ -1,8 +1,37 @@
+var temp= `<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>My Team</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/c502137733.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 jumbotron mb-3 main-header bg-danger">
+                <h1 class="text-center text-white">My Team</h1>
+            </div>
+        </div>
+    </div>`
+
+    var bottom = `</div>
+    </div>
+</div>
+</body>
+</html>`
+
 function generateIntern(interns){
-    //at each intern we will create a card
+    <!-- at each intern we will create a card -->
     var returnVal =``;
     for (loop){
-        //loop through each intern
+        <!-- loop through each intern -->
         returnVal +=`<div class="intern-employee-card">
         <div class="card-header bg-primary text-white">
             <h2 class="card-title">Masahiro kawamura</h2>
@@ -25,9 +54,13 @@ function generateIntern(interns){
     var managers =[];
     var intern =[];
     for(var i=0; i<array.length;i++){
-        if(array[i])// if the role is manager push to manager
-        if(array[i])// if the role is engineer push to engineer
-        if(array[i])// if the role is intern push to intern
+        
+        <!-- if the role is manager push to manager -->
+        if(array[i])
+        <!-- if the role is engineer push to engineer -->
+        if(array[i])
+        <!-- if the role is intern push to intern -->
+        if(array[i])
     }
 
 var htmlIntern = generateIntern(intrens);
@@ -35,7 +68,7 @@ var htmlIntern = generateIntern(intrens);
     var htmlEngineer = generateEngineer(manager);
     var output = temp + htmlEngineer + htmlIntern + htmlManager + bottom;
 
-    // writetofile using output 
+    <!-- writetofile using output -->
     writeToFile("./assets/html.index", html);
  }
 

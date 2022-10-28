@@ -102,7 +102,9 @@ function askChoices(){
         }else if (answer.choice === "intern") {
             internOperations()
         }else if (answer.choice === "stop"){
-            generateHtml()
+            generateHtml(answers){
+                
+            }
             return
 
         }
